@@ -22,13 +22,13 @@ Note App used to save your notes as text, images, and URLs by beautiful design b
 ## Built With
 
 * [Kotlin](https://kotlinlang.org) - As a programming language.
+*[Jetpack Compose](https://developer.android.com/jetpack/compose?gclid=CjwKCAjwwo-WBhAMEiwAV4dybRWhbwqLnJL0s6HtHdoYk-89LaZz4qSc_mUyWbSmx3JW6MzCxR6A2RoCRtYQAvD_BwE&gclsrc=aw.ds) - Jetpack Compose is Android’s modern toolkit for building native UI. It simplifies and accelerates UI development on Android. Quickly bring your app to life with less code, powerful tools, and intuitive Kotlin APIs.
+
 * [Coroutines](https://developer.android.com/kotlin/coroutines) - For multithreading while handling requests to the server and local database.
 * [Navigation Component](https://developer.android.com/guide/navigation/navigation-getting-started) - To handle app navigation.
 * [Multidex](https://developer.android.com/studio/build/multidex) - To enable creating multi dex files because of using set of libraries that reached the maximum size of single dex file.
 * [Model-View-ViewModel(MVVM)](https://developer.android.com/topic/architecture) - Offers an implementation of observer design pattern.
 * [LiveData](https://developer.android.com/topic/libraries/architecture/livedata) - notifies views of any database changes in an observer way.
-* [Retrofit](https://square.github.io/retrofit/) - A type-safe HTTP client for Android and Java
-* [Glide](https://github.com/bumptech/glide) - It is a fast and efficient open source media management and image loading framework for Android that wraps media decoding, memory and disk caching, and resource pooling into a simple and easy to use interface.
-* [Timber](https://github.com/JakeWharton/timber) - It helps in logging while debugging your app. and all logging code will not be embedded in the released APK.
-* [Hilt](https://developer.android.com/training/dependency-injection/hilt-android) - It is arguably the most used Dependency Injection, or DI, framework for Android. Many Android projects use Dagger to simplify building and providing dependencies across the app. It gives you the ability to create specific scopes, modules, and components, where each forms a piece of a puzzle: The dependency graph.
-* [Clean Architecture](https://www.raywenderlich.com/3595916-clean-architecture-tutorial-for-android-getting-started) - Applying Clean Architecture and Solid Principles to build a robust, maintainable, and testable application.
+* [Naiper](https://github.com/AAkira/Napier) - It helps in logging while debugging your app. and all logging code will not be embedded in the released APK.
+* [koin](https://insert-koin.io/docs/quickstart/android/) - It is arguably the most used Dependency Injection, or DI, framework for Android. Many Android projects use Dagger to simplify building and providing dependencies across the app. It gives you the ability to create specific scopes, modules, and components, where each forms a piece of a puzzle: The dependency graph.
+* [Clean Architecture](https://www.raywenderlich.com/3595916-clean-architecture-tutorial-for-android-getting-started) - Applying Clean Architecture and usecases and  Solid Principles to build a robust, maintainable, and testable application.
