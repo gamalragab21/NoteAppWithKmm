@@ -1,0 +1,55 @@
+CREATE TABLE  note_Entity(
+    id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    noteTitle TEXT NOT NULL,
+    noteSubTitle TEXT NOT NULL,
+    noteBody TEXT NOT NULL,
+    date_added REAL NOT NULL,
+    date_updated REAL NOT NULL,
+    noteImage TEXT,
+    noteUrl TEXT,
+    noteColor INTEGER NOT NULL
+);
+
+selectAllNotes:
+SELECT *
+FROM note_Entity;
+
+insertNote:
+INSERT OR REPLACE
+INTO note_Entity (
+    id,
+    noteTitle,
+    noteSubTitle,
+    noteBody,
+    date_added,
+    date_updated,
+    noteImage,
+    noteUrl,
+    noteColor
+) VALUES (?, ?, ?, ?, ?, ?, ?, ?,?);
+
+searchNotes:
+SELECT * FROM note_Entity
+WHERE noteTitle LIKE ('%' || :query || '%')
+OR noteSubTitle LIKE ('%' || :query || '%')
+OR noteBody LIKE ('%' || :query || '%')
+ORDER BY date_updated DESC -- Ordering can cause duplicates in the results because they all have identical timestamps
+LIMIT :pageSize
+OFFSET :offset;
+
+getAllNotes:
+SELECT * FROM note_Entity
+ORDER BY date_updated DESC -- Ordering can cause duplicates in the results because they all have identical timestamps
+LIMIT :pageSize
+OFFSET :offset;
+
+getNoteById:
+SELECT * FROM note_Entity
+WHERE id = :id;
+
+removeAllNotes:
+DELETE FROM note_Entity;
+
+removeNote:
+DELETE FROM note_Entity
+WHERE id = :id;
